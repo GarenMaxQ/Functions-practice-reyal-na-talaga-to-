@@ -5,120 +5,85 @@
 #include <string>
 using namespace std;
 
-void Welcome(string MyName) {
-    cout << "My name is " << MyName << endl;;
-    cout << "Reyal practice na talaga to ng functions\n";
-    cout << "Nani the fuckkk\n";
-    cout << "Sana all may pag-asa\n";
-    cout << "Sheeshable academic achiever cutie\n";
-    cout << "WKWKWKWKWKWKWKWKW\n";
-    cout << "'Till I Met You~\n";
+void Ako();
+int oddNumbers(int a);
+float MayPagAsaBa(float l, float u, float h, float baka, float mag, float scholar, float yarn, float amp);
+
+int main() {
+
+	Ako();
+
+	system("pause");
+	system("cls");
+
+	int myNumbers, b = 0;
+
+	myNumbers = oddNumbers(b);
+	cout << myNumbers;
+
+	system("pause");
+	system("cls");
+
+	float WalangPake, Scholar, Sana, Ako, Kung, Di, Dahil, Sa, Katangahan;
+	cout << "Enter your grades\n";
+	cout << "PPE: ";
+	cin >> Scholar;
+	cout << "RPH: ";
+	cin >> Sana;
+	cout << "P.E: ";
+	cin >> Ako;
+	cout << "ITC Lec: ";
+	cin >> Kung;
+	cout << "ITC Lab: ";
+	cin >> Di;
+	cout << "CompProg Lec: ";
+	cin >> Dahil;
+	cout << "CompProg Lab: ";
+	cin >> Sa;
+	cout << "STS: ";
+	cin >> Katangahan;
+	WalangPake = MayPagAsaBa(Scholar, Sana, Ako, Kung, Di, Dahil, Sa, Katangahan);
+	cout << "Result: " << WalangPake<<"\n";
+	if (WalangPake < 3)
+	{
+		cout << "Awit, walang scholarship\n";
+		cout << "Katanga-tanga kasi\n";
+		cout << "Wala na ngang scholarship, wala pang pag-asa\n";
+	}
+	else
+	{
+		cout << "THANK YOU, LORD. I LOVE YOU!\n";
+	}
+
 }
-int cashier(int a, int b) {
-    int sukli;
-    sukli = a - b;
-    return sukli;
+
+void Ako() {
+	int payment;
+	cout << "Ako'y tahimik lang sa umpisa\n";
+	cout << "Don't what to do whenever you are near\n";
+	cout << "Nani the fuck\n";
+	cout << "Enter payment: $";
+	cin >> payment;
+
 }
 
-double showDecimal(double u, double v, double a) {
-    double dec;
-    dec = u + v + a;
-    return dec;
-}
-string Scholarship() {
-    return  "Sana ma-scholar ako, please Lorddd\n";
-}
 
-void Welcome();
-void Program();
-void Closing();
-void Body();
-void Closing() {
-    cout << "\nThank you for using C++";
+
+int oddNumbers(int a) {
+	cout << "These are odd numbers from 0 to 1000\n";
+	for (int a = 0; a < 1000; a++)
+	{
+		if (a%2 == 1)
+		{
+			cout << "Number: " << a << endl;
+		}
+	}
+	return 0;
 }
 
-string TX02_Professors() {
-    return "Leandro 'Ian' Tulod aka The Goat";
-}
-int Area(int a, int b) {
-    int area = a * b;
-    return area;
-}
-int main()
-{
-    int change, bill = 1000, payment;
-    Welcome("Daniel Anthony D. Villegas");
-    cout << "Your bill is: $" << bill;
-    cout << "\nEnter your payment: $";
-    cin >> payment;
-    change = cashier(payment, bill);
-    while (change < 0)
-    {
-        cout << "Insufficient payment\n";
-        cout << "Your bill is: $" << bill;
-        cout << "\nEnter your payment: $";
-        cin >> payment;
-        change = cashier(payment, bill);
-    }
-
-    if (change >= 0)
-    {
-        cout << "Your change is $" << change;
-        cout << "\nThank you\n";
-    }
-
-    system("pause");
-    system("cls");
-
-    double total,baon = 1.37, ipon = 10.50, suweldo = 50.74;
-    cout << "These are my money" << endl;
-    cout << "Baon: $" << baon << endl;
-    cout << "Ipon: $" << ipon << endl;
-    cout << "Suweldo: $" << suweldo << endl;
-    system("pause");
-    total = showDecimal(baon, ipon, suweldo);
-    cout << "My total money is: $" << total;
-    cout << "\nNgayon ko lang nalaman, directly proportional pala yung pera sa pag-asa.\n";
-    system("pause");
-
-    string result = Scholarship();
-    cout << result;
-
-    system("pause");
-    system("cls");
-
-    cout << "John Benedict Legaspi\n";
-    Welcome();
-    Program();
-    Body();
-
-    system("pause");
-    system("cls");
-
-    TX02_Professors();
-
-    system("pause");
-    system("cls");
-
-    int l, w, Aarea;
-    cout << "Enter measurements of your rectangle\n";
-    cout << "Enter length: ";
-    cin >> l;
-    cout << "Enter width: ";
-    cin >> w;
-    Aarea = Area(l, w);
-    cout << "The area of your rectangle is: " << Aarea;
-
-    
-}
-void Welcome() {
-    cout << "Welcome\n";
-}
-void Program() {
-    cout << "It has been a wonderful day!\n";
-        Welcome();
-}
-void Body() {
-    Closing();
-    cout << ", everybody.\n";
+float MayPagAsaBa(float l, float u, float h, float baka, float mag, float scholar, float yarn, float amp) {
+	float wala;
+	wala = l + u + h + baka + mag + scholar + yarn+ amp;
+	wala /= 8;
+	return wala;
 }
