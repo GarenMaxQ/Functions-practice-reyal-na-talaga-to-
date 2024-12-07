@@ -3,87 +3,89 @@
 
 #include <iostream>
 #include <string>
+#include <thread> 
+#include <chrono>
 using namespace std;
 
-void Ako();
-int oddNumbers(int a);
-float MayPagAsaBa(float l, float u, float h, float baka, float mag, float scholar, float yarn, float amp);
+float expenses(float food, float clothes, float transportation, float wants);
+string wish();
 
 int main() {
-
-	Ako();
+	const int delay_ms = 2000;
+	cout << " "<<endl;
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Will I even live long enough to make it?\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "I'm not sure\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Damn it. I want to live a long and fruitful life, just like everybody else\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "I want to have a family as well\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "I'm not aiming to be hyper successfull, just successfull enough so that my children won't have to worry about expenses ever again\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "But of course, I'll have to teach them the real value of money, so that they won't take it for granted\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Hays\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
 
 	system("pause");
 	system("cls");
-
-	int myNumbers, b = 0;
-
-	myNumbers = oddNumbers(b);
-	cout << myNumbers;
-
-	system("pause");
-	system("cls");
-
-	float WalangPake, Scholar, Sana, Ako, Kung, Di, Dahil, Sa, Katangahan;
-	cout << "Enter your grades\n";
-	cout << "PPE: ";
-	cin >> Scholar;
-	cout << "RPH: ";
-	cin >> Sana;
-	cout << "P.E: ";
-	cin >> Ako;
-	cout << "ITC Lec: ";
-	cin >> Kung;
-	cout << "ITC Lab: ";
-	cin >> Di;
-	cout << "CompProg Lec: ";
-	cin >> Dahil;
-	cout << "CompProg Lab: ";
-	cin >> Sa;
-	cout << "STS: ";
-	cin >> Katangahan;
-	WalangPake = MayPagAsaBa(Scholar, Sana, Ako, Kung, Di, Dahil, Sa, Katangahan);
-	cout << "Result: " << WalangPake<<"\n";
-	if (WalangPake < 3)
+	cout << " " << endl;
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Petot po talaga yang dollar sign\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "sadiyang hindi lang talaga ako abot sa standards niya :(\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "EME HAHAHAHAHAHAHAHAHAHAHAHAHAHA\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Magtitipid o magpapakamatay?\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	float katangahan, pagkain, damit, pamasahe, gusto;
+	cout << "How much ba sa food? $";
+	cin >> pagkain;
+	cout << "Eh sa clothes mo? $";
+	cin >> damit;
+	cout << "How about your transit expenses? $";
+	cin >> pamasahe;
+	cout << "Of course, syempre meron din ang mga katangahang pinag-gagastusan mo diba\n";
+	cout << "How much ba kasi? $";
+	cin >> gusto;
+	katangahan = expenses(pagkain, damit, pamasahe, gusto);
+	cout << "Endgame stupidity\n";
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	cout << "HAHAHAHA\n";
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	cout << "Ang natira sa limit ay??? $"<<katangahan<<endl;
+	this_thread::sleep_for(chrono::milliseconds(1000));
+	if (katangahan < 0)
 	{
-		cout << "Awit, walang scholarship\n";
-		cout << "Katanga-tanga kasi\n";
-		cout << "Wala na ngang scholarship, wala pang pag-asa\n";
+		cout << "Katanga-tanga talagang nilalang\n";
 	}
 	else
 	{
-		cout << "THANK YOU, LORD. I LOVE YOU!\n";
+		cout << "Nah, I'd tipid\n";
 	}
 
 }
 
-void Ako() {
-	int payment;
-	cout << "Ako'y tahimik lang sa umpisa\n";
-	cout << "Don't what to do whenever you are near\n";
-	cout << "Nani the fuck\n";
-	cout << "Enter payment: $";
-	cin >> payment;
+float expenses(float food, float clothes, float transportation, float wants) {
+	float limit = 1000, gastador, gastado;
+	gastador = food + clothes + transportation + wants;
+	gastado = limit - gastador;
 
+	return gastado;
 }
 
-
-
-int oddNumbers(int a) {
-	cout << "These are odd numbers from 0 to 1000\n";
-	for (int a = 0; a < 1000; a++)
-	{
-		if (a%2 == 1)
-		{
-			cout << "Number: " << a << endl;
-		}
-	}
+string wish() {
+	const int delay_ms = 1000;
+	cout << " ";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Kapag hindi ko talaga nakuha yang scholarship, nako\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Tatalon talaga ako\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
+	cout << "Potcha\n";
+	this_thread::sleep_for(chrono::milliseconds(delay_ms));
 	return 0;
-}
-
-float MayPagAsaBa(float l, float u, float h, float baka, float mag, float scholar, float yarn, float amp) {
-	float wala;
-	wala = l + u + h + baka + mag + scholar + yarn+ amp;
-	wala /= 8;
-	return wala;
 }
